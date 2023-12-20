@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content%}
+<html lang="pt-br">
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2>Banheiros Adaptados</h2>
+              <p>Veja aqui os estabelecimentos com acesso a Banheiros Adaptados:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <section class="sample-page">
+      <div class="container" data-aos="fade-up">
+
+        <table>
+            <section class="section">
+                <div class="row">
+                  <div class="col-lg-6">
+          
+                    <div class="">
+                      <div class="">
+                        <h5><b>Conheça estabelecimentos acessíveis:</b></h5>
+          
+                        <!-- Default Table -->
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nome do estabelecimento</th>
+                            <th scope="col">Localização</th>
+                            <th scope="col">Horários</th>
+                            <th scope="col"> Estabelecimento</th>
+                          </tr>
+                        </thead>
+                        <tbody >
+                          {% for estabelecimentos in estabelecimentos%}
+                          <tr>
+                            <td>{{estabelecimentos.nomeE}}</td>
+                            <td>{{estabelecimentos.local}}</td>
+                            <td>{{estabelecimentos.horario}}</td>
+                            <td>
+                              {%if user.is_authenticated%}
+                                {%if user == estabelecimentos.nome%}
+                                <button class="btn-login"><a href="{%url 'updateEstabelecimento' estabelecimentos.id%}">Editar</a></button>
+                                {%else%}
+                                  <button class="btn-login"><a href="{%url 'verEstabelecimento' estabelecimentos.id%}">Ver</a></button>
+                                {%endif%}
+                              {%else%}
+                              <button class="btn-login"><a href="{%url 'verEstabelecimento' estabelecimentos.id%}">Ver</a></button>
+                              {%endif%}
+                            </td>
+                          </tr>
+                          {%endfor%}
+                        </tbody>
+                      </table>
+                      <!-- End Default Table Example -->
+                      </div>
+                    </div>
+                          
+          
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              </section>
+          </table>
+          <p></p>
+      </div>
+    </div>
+
+   
+  </section>
+</main>
+
+</body>
+
+</html>
+{% endblock content%}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content%}
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+    <link href="{%static 'assets/css/login.css'%}" rel="stylesheet">
+    <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+
+                <div class="container">
+                  <div class="">
+                    <div class="col-lg-12 col-md-12 d-flex flex-column align-items-center justify-content-center">
+        
+                      <div class="d-flex justify-content-center py-4">
+                      </div><!-- End Logo -->
+        
+                      <div class="card mb-3">
+        
+                        <div class="card-body">
+        
+                          <div class="pt-4 pb-2">
+                            <h5 class="card-title text-center pb-0 fs-4">Recupere sua senha</h5>
+                           
+                          </div>
+        
+                          <form class="row g-3 needs-validation" novalidate action="{%url 'forgot'%}" method="POST">
+                            {% csrf_token %}
+
+                            <div class="col-12">
+                                <label for="yourUsername" class="form-label">Email</label>
+                                <div class="input-group has-validation">
+                                  <input placeholder="Digite o seu email de recuperação" type="email" name="forgotemail" class="form-control" id="yourUsername" required>
+                                  <div class="invalid-feedback">Please enter your username.</div>
+                                </div>
+                              </div>
+        
+                            <div class="col-12">
+                            </div>
+                            <div class="col-12 ">
+                              <button class="btn btn-log w-100" type="submit">Confirmar Email</button>
+                            </div>
+                          </form>
+        
+                        </div>
+                      </div>
+                     
+                    </div>
+                    <!-- <div class="col-lg-6 order-1 order-lg-2">
+                      <img src="assets/img/LOGO SW3.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+                    </div> -->
+                  </div>
+                </div>
+            </div>
+       
+      </div>
+    </div>
+
+   <div>
+    <p></p>
+   </div>
+
+    </div>
+  </section>
+  <!-- End Hero Section -->
+  
+  </main><!-- End #main -->
+
+</body>
+
+</html>
+{% endblock content%}

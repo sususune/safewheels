@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content%}
+<html lang="pt-br">
+
+<body>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+    <div class="container position-relative" >
+      <div class="row gy-5" data-aos="fade-in">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+          <h2>Safe <span>Wheels</span></h2>
+          <p>O projeto Safe Wheels - Rodas Seguras - visa avaliar a acessibilidade de estabelecimentos em Caicó/RN para pessoas portadoras de deficiência física</p>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#about" class="btn-get-started">Saiba mais</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src="{%static 'assets/img/LOGO SW3.png'%}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+        </div>
+      </div>
+    </div>
+
+   <div>
+    <p></p>
+   </div>
+
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Safe Wheels</h2>
+          <p>Explore o Safe Wheels, seu guia para acessibilidade e mobilidade segura. Junte-se a nós na missão de tornar o mundo mais acessível e inclusivo</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+
+            <img src="{%static 'assets/img/cadeira2.jpg'%}" class="img-fluid rounded-4 mb-4" alt="">
+            <p> A acessibilidade em um estabelecimento é de suma importância devido a várias razões, entre as quais se destacam a promoção da inclusão social, o cumprimento dos princípios de direitos humanos, a expansão da base de clientes, a conformidade com regulamentações legais, a construção de uma imagem corporativa positiva, a fomentação da inovação no design universal e a criação de um ambiente de uso conveniente. Além de garantir igualdade de acesso para pessoas com deficiências, a acessibilidade beneficia o público em geral, tornando-se um fator crítico tanto para a responsabilidade social das organizações quanto para o êxito comercial.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="content ps-0 ps-lg-5">
+              <p>
+                Diante do preocupante número de estabelecimentos desprovidos de acessibilidade para pessoas com deficiência física, especialmente aqueles que utilizam cadeiras de rodas, o projeto Safe Wheels - Rodas Seguras - tem como objetivo realizar um abrangente levantamento na cidade de Caicó/RN. A meta é identificar quais locais proporcionam as melhores condições de acesso para esse público tão importante.
+              </p>
+              <p class="fst-italic">
+                Aqui você encontra estabelecimentos com:
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> Acessibilidade</li>
+                <li><i class="bi bi-check-circle-fill"></i> Segurança</li>
+                <li><i class="bi bi-check-circle-fill"></i> Confiança do público</li>
+              </ul>
+              <div class="position-relative mt-4">
+                <img src="{%static 'assets/img/cadeira3.jpg'%} " class="img-fluid rounded-4" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+
+    <!-- ======= Our Services Section ======= -->
+    <section id="services" class="services sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Estabelecimentos</h2>
+          <p>Aqui, exploramos a importância da acessibilidade em locais públicos e privados e fornecemos informações valiosas para promover a inclusão e mobilidade segura</p>
+        </div>
+
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-person-wheelchair"></i>
+              </div>
+              <h3>Rampa para Acesso</h3>
+              <p>A rampa de acessibilidade é importante para garantir que usuários de cadeiras de rodas e pessoas com dificuldade de locomoção em geral possam acessar qualquer piso do seu edifício.</p>
+              <a href="{%url 'rampa'%}" class="readmore stretched-link">Ver estabelecimentos<i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-check2-circle"></i>
+              </div>
+              <h3>Barras de Apoio</h3>
+              <p>As barras de apoio são peças essenciais para trazer mais segurança, principalmente para aqueles que precisam de um local para sustentação e apoio para levantar ou se locomover.</p>
+              <a href="{%url 'barras'%}" class="readmore stretched-link">Ver estabelecimentos <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-easel"></i>
+              </div>
+              <h3>Banheiros Adaptados</h3>
+              <p>Um banheiro acessível é aquele que é adaptado para o uso de pessoas com algum tipo de necessidade especial ou dificuldade de locomoção.</p>
+              <a href="{%url 'banheiros'%}" class="readmore stretched-link">Ver estabelecimentos <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-building-fill-check"></i>
+              </div>
+              <h3>Acessibilidade Arquitetônica</h3>
+              <p>A acessibilidade arquitetônica é de extrema importância porque se refere à criação de espaços físicos e edifícios que podem ser usados por todas as pessoas, independentemente de suas capacidades físicas ou limitações. </p>
+              <a href="{%url 'arquitetonica'%}" class="readmore stretched-link">Ver estabelecimentos <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-car-front"></i>
+              </div>
+              <h3>Acessibilidade no Transporte</h3>
+              <p>A acessibilidade no transporte é de extrema importância porque garante que todas as pessoas, incluindo aquelas com mobilidade reduzida, idosos e pessoas com deficiências, possam utilizar os sistemas de transporte de forma igualitária e independente.</p>
+              <a href="{%url 'transporte'%}" class="readmore stretched-link">Ver estabelecimentos <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-phone-vibrate"></i>
+              </div>
+              <h3>Acessibilidade Digital</h3>
+              <p>A acessibilidade digital é de extrema importância porque garante que todas as pessoas, independentemente de suas habilidades ou deficiências, possam usar a tecnologia e os recursos digitais. Isso promove a inclusão, cumpre leis, amplia mercados, melhora a usabilidade, demonstra responsabilidade social, impulsiona inovações e é uma questão ética e de direitos humanos.</p>
+              <a href="{%url 'digital'%}" class="readmore stretched-link">Ver estabelecimentos <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Our Services Section -->
+
+
+  </main><!-- End #main -->
+
+</body>
+
+</html>
+{% endblock content%}

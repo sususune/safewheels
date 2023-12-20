@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content%}
+<html lang="pt-br">
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+    <link href="{%static 'assets/css/login.css'%}" rel="stylesheet">
+    <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+
+                <div class="container">
+                  <div class="">
+                    <div class="col-lg-12 col-md-12 d-flex flex-column align-items-center justify-content-center">
+        
+                      <div class="d-flex justify-content-center py-4">
+                      </div><!-- End Logo -->
+        
+                      <div style="width: 80%" class="card mb-3">
+        
+                        <div class="card-body">
+        
+                          <div class="pt-4 pb-2">
+                            <h5 class=" text-center pb-0 fs-4"><b>Informações: {{estabelecimentos.nomeE}} | '{{estabelecimentos.id}}' </b></h5>
+                           
+                          </div>
+        
+                          <form enctype="multipart/form-data">
+                            <div class="">
+                              
+                                <div class="card-body">
+                          
+                                  <div class="form-group">
+                                    <label for="">Nome do estabelecimento</label>
+                                    <input type="text" name="nomeE" class="form-control" placeholder="{{estabelecimentos.nomeE}}" disabled>
+                                  </div>
+                                  <p></p>
+                                  <div class="form-group">
+                                    <label for="">Localização</label>
+                                    <input type="text" name="local" class="form-control" placeholder="{{estabelecimentos.local}}" disabled>
+                                  </div>
+                                  <p></p>
+                                  <div class="form-group">
+                                    <label for="">Horários</label>
+                                    <input type="text" name="horario" class="form-control" placeholder="{{estabelecimentos.horario}}" disabled>
+                                  </div>
+                                  <p></p>
+
+                                  <label for=""><p><i>Tipos de acessibilidade:</i></p></label>
+                                  
+                                  <div class="row">
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <div class="form-check">
+                                          <input type="checkbox" name="check1" class="form-check-input" {%if estabelecimentos.rampa_para_acesso%} checked {%endif%} disabled>
+                                          <label class="form-check-label">Rampa para acesso</label>
+                                        </div>
+                          
+                                        <div class="form-check">
+                                          <input type="checkbox" name="check2" class="form-check-input" {%if estabelecimentos.barras_de_apoio%} checked {%endif%} disabled>
+                                          <label class="form-check-label">Barras de apoio</label>
+                                        </div>
+                          
+                                        <div class="form-check">
+                                          <input type="checkbox" name="check3" class="form-check-input"  {%if estabelecimentos.banheiro_adapt%} checked {%endif%} disabled>
+                                          <label class="form-check-label">Banheiros adaptados</label>
+                                        </div>
+                          
+                                        <div class="form-check">
+                                          <input type="checkbox" name="check4" class="form-check-input"  {%if estabelecimentos.acess_transporte%} checked {%endif%} disabled>
+                                          <label class="form-check-label">Acessibilidade no transporte</label>
+                                        </div>
+                          
+                                        <div class="form-check">
+                                          <input type="checkbox" name="check5" class="form-check-input"  {%if estabelecimentos.acess_arquit%} checked {%endif%} disabled>
+                                          <label class="form-check-label">Acessibilidade arquitetônica</label>
+                                        </div>
+                          
+                                      </div>
+                                    </div>
+                          
+                                    <div class="col-sm-6">
+                                      <div class="form-group">
+                                        <div class="form-check">
+                                          <input type="checkbox" name="check6" class="form-check-input"  {%if estabelecimentos.acess_comunic%} checked {%endif%} disabled>
+                                          <label class="form-check-label">Acessibilidade nas comunicações</label>
+                                        </div>
+                          
+                                        <div class="form-check">
+                                          <input type="checkbox" name="check7" class="form-check-input"  {%if estabelecimentos.acess_digital%} checked {%endif%} disabled>
+                                          <label class="form-check-label">Acessibilidade digital</label>
+                                        </div>
+                          
+                                        <div class="form-check">
+                                          <input type="checkbox" name="check8" class="form-check-input"  {%if estabelecimentos.acess_instrument%} checked {%endif%} disabled>
+                                          <label class="form-check-label">Acessibilidade instrumental</label>
+                                        </div>
+                          
+                                        <div class="form-check">
+                                          <input type="checkbox" name="check9" class="form-check-input"  {%if estabelecimentos.acess_program%} checked {%endif%} disabled>
+                                          <label class="form-check-label">Acessibilidade programática</label>
+                                        </div>
+                          
+                                        <div class="form-check">
+                                          <input type="checkbox" name="check10" class="form-check-input"  {%if estabelecimentos.acess_metod%} checked {%endif%} disabled>
+                                          <label class="form-check-label">Acessibilidade metodológica</label>
+                                        </div>
+                          
+                                      </div>
+                                    </div>
+                          
+                                  </div>
+                                  <p></p>
+                                  <div class="form-group">
+                                    <label for="">Informações</label>
+                                    <textarea name="desc" cols="30" rows="10" class="form-control" disabled>{{estabelecimentos.desc}}</textarea>
+                                  </div>
+                                  <p></p>
+                                  {%if estabelecimentos.imagens%} <img src="{{estabelecimentos.imagens.url}}" alt="" style="width: 60%; margin: auto;"> {%endif%}
+                                </div>
+                                
+                              </form>
+                            </div>
+                          </form>
+                          
+                      </div>
+                      </div>
+                     
+                    </div>
+                    <!-- <div class="col-lg-6 order-1 order-lg-2">
+                      <img src="assets/img/LOGO SW3.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+                    </div> -->
+                  </div>
+                </div>
+            </div>
+       
+      </div>
+    </div>
+
+   <div>
+    <p></p>
+   </div>
+
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+  <main id="main">
+
+  
+  </main><!-- End #main -->
+</body>
+
+</html>
+{% endblock content%}
